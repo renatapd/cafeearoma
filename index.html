@@ -1,0 +1,410 @@
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café & Aroma — Seu momento merece um café especial</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cafeMarrom: '#6F4E37',
+                        cafeCreme: '#F7F0E6',
+                        cafeDourado: '#C8A96B',
+                        cafeEscuro: '#4A3323',
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'serif'],
+                        sans: ['Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-cafeCreme text-cafeEscuro font-sans antialiased selection:bg-cafeDourado selection:text-white">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full bg-cafeCreme/95 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#inicio" class="flex items-center gap-2 text-2xl font-serif font-bold text-cafeMarrom">
+                <i class="fa-solid fa-mug-hot text-cafeDourado"></i>
+                <span>Café & Aroma</span>
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="#inicio" class="hover:text-cafeDourado transition-colors">Início</a>
+                <a href="#sobre" class="hover:text-cafeDourado transition-colors">Sobre Nós</a>
+                <a href="#cardapio" class="hover:text-cafeDourado transition-colors">Cardápio</a>
+                <a href="#destaques" class="hover:text-cafeDourado transition-colors">Destaques</a>
+                <a href="#galeria" class="hover:text-cafeDourado transition-colors">Galeria</a>
+                <a href="#contato" class="hover:text-cafeDourado transition-colors">Contato</a>
+            </nav>
+
+            <!-- Botão Ver Cardápio -->
+            <div class="hidden md:block">
+                <a href="#cardapio" class="bg-cafeMarrom hover:bg-cafeEscuro text-cafeCreme px-5 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm">
+                    Ver Cardápio
+                </a>
+            </div>
+
+            <!-- Botão Menu Mobile -->
+            <button id="menu-btn" class="md:hidden text-cafeMarrom text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cafeCreme border-b border-cafeMarrom/10 px-6 py-4 space-y-3 shadow-lg">
+            <a href="#inicio" class="block text-base font-medium hover:text-cafeD0urado transition-colors">Início</a>
+            <a href="#sobre" class="block text-base font-medium hover:text-cafeDourado transition-colors">Sobre Nós</a>
+            <a href="#cardapio" class="block text-base font-medium hover:text-cafeDourado transition-colors">Cardápio</a>
+            <a href="#destaques" class="block text-base font-medium hover:text-cafeDourado transition-colors">Destaques</a>
+            <a href="#galeria" class="block text-base font-medium hover:text-cafeDourado transition-colors">Galeria</a>
+            <a href="#contato" class="block text-base font-medium hover:text-cafeDourado transition-colors">Contato</a>
+            <div class="pt-2">
+                <a href="#cardapio" class="block text-center bg-cafeMarrom text-cafeCreme py-2.5 rounded-full font-medium">Ver Cardápio</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-20 bg-gradient-to-b from-cafeCreme via-[#EFE5D5] to-cafeCreme overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center md:text-left">
+                <span class="inline-block bg-cafeDourado/20 text-cafeMarrom text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Cafeteria Artesanal
+                </span>
+                <h1 class="text-4xl md:text-6xl font-serif font-bold text-cafeMarrom leading-tight">
+                    Seu momento merece um café especial.
+                </h1>
+                <p class="text-lg text-cafeEscuro/80 max-w-lg mx-auto md:mx-0">
+                    Cafés artesanais, sabores irresistíveis e um ambiente feito para você.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
+                    <a href="#cardapio" class="w-full sm:w-auto bg-cafeMarrom hover:bg-cafeEscuro text-cafeCreme px-8 py-3.5 rounded-full font-medium transition-all shadow-md text-center">
+                        Conheça o cardápio
+                    </a>
+                    <a href="#contato" class="w-full sm:w-auto border border-cafeMarrom text-cafeMarrom hover:bg-cafeMarrom hover:text-cafeCreme px-8 py-3.5 rounded-full font-medium transition-all text-center">
+                        Fale Conosco
+                    </a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <div class="absolute -inset-2 bg-cafeDourado/30 rounded-3xl blur-xl transform rotate-3"></div>
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800" alt="Xícara de café especial sobre mesa de madeira" class="relative rounded-2xl shadow-2xl object-cover w-full max-w-md h-[450px]">
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NÓS -->
+    <section id="sobre" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=800" alt="Ambiente aconchegante da cafeteria" class="rounded-2xl shadow-lg object-cover w-full h-[400px]">
+            </div>
+            <div class="space-y-6">
+                <span class="text-cafeDourado font-semibold uppercase tracking-wider text-sm">Nossa História</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-cafeMarrom">
+                    Tradição, aconchego e paixão em cada xícara
+                </h2>
+                <p class="text-cafeEscuro/80 leading-relaxed">
+                    Fundada com o propósito de transformar a pausa para o café em uma experiência memorável, a <strong>Café & Aroma</strong> combina grãos selecionados de alta qualidade com um atendimento acolhedor. Nossa missão é proporcionar um refúgio urbano onde o conforto e o sabor caminham lado a lado.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-4">
+                    <div class="border-l-2 border-cafeDourado pl-4">
+                        <h4 class="font-serif font-bold text-cafeMarrom text-lg">Qualidade</h4>
+                        <p class="text-sm text-cafeEscuro/70 mt-1">Produtos frescos e grãos especiais selecionados.</p>
+                    </div>
+                    <div class="border-l-2 border-cafeDourado pl-4">
+                        <h4 class="font-serif font-bold text-cafeMarrom text-lg">Ambiente</h4>
+                        <p class="text-sm text-cafeEscuro/70 mt-1">Espaço acolhedor ideal para estudar ou relaxar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section id="cardapio" class="py-24 bg-cafeCreme">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-cafeDourado font-semibold uppercase tracking-wider text-sm">Delícias Artesanais</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-cafeMarrom">Nosso Cardápio</h2>
+                <p class="text-cafeEscuro/80">Explore nossa seleção de cafés quentes, especiais e acompanhamentos preparados com carinho.</p>
+            </div>
+
+            <!-- Abas ou Categorias do Cardápio -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <!-- Bebidas -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm space-y-6">
+                    <h3 class="text-2xl font-serif font-bold text-cafeMarrom flex items-center gap-2 border-b pb-3 border-cafeCreme">
+                        <i class="fa-solid fa-mug-saucer text-cafeDourado"></i> Cafés & Bebidas
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b border-dashed border-cafeCreme pb-3">
+                            <div>
+                                <h4 class="font-bold text-cafeMarrom">Espresso</h4>
+                                <p class="text-xs text-cafeEscuro/60">Café curto, intenso e aromático.</p>
+                            </div>
+                            <span class="font-bold text-cafeDourado">R$ 6,00</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-dashed border-cafeCreme pb-3">
+                            <div>
+                                <h4 class="font-bold text-cafeMarrom">Cappuccino</h4>
+                                <p class="text-xs text-cafeEscuro/60">Café, leite vaporizado e cacau polvilhado.</p>
+                            </div>
+                            <span class="font-bold text-cafeDourado">R$ 9,00</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-dashed border-cafeCreme pb-3">
+                            <div>
+                                <h4 class="font-bold text-cafeMarrom">Latte</h4>
+                                <p class="text-xs text-cafeEscuro/60">Dose de espresso com bastante leite cremoso.</p>
+                            </div>
+                            <span class="font-bold text-cafeDourado">R$ 10,00</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h4 class="font-bold text-cafeMarrom">Mocha</h4>
+                                <p class="text-xs text-cafeEscuro/60">Espresso, calda de chocolate e leite cremoso.</p>
+                            </div>
+                            <span class="font-bold text-cafeDourado">R$ 11,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Acompanhamentos -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm space-y-6">
+                    <h3 class="text-2xl font-serif font-bold text-cafeMarrom flex items-center gap-2 border-b pb-3 border-cafeCreme">
+                        <i class="fa-solid fa-cookie-bite text-cafeDourado"></i> Comidinhas & Doces
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b border-dashed border-cafeCreme pb-3">
+                            <div>
+                                <h4 class="font-bold text-cafeMarrom">Bolo de chocolate</h4>
+                                <p class="text-xs text-cafeEscuro/60">Fatia generosa de bolo caseiro molhadinho.</p>
+                            </div>
+                            <span class="font-bold text-cafeDourado">R$ 8,00</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-dashed border-cafeCreme pb-3">
+                            <div>
+                                <h4 class="font-bold text-cafeMarrom">Croissant</h4>
+                                <p class="text-xs text-cafeEscuro/60">Massa folhada amanteigada e crocante.</p>
+                            </div>
+                            <span class="font-bold text-cafeDourado">R$ 9,00</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-dashed border-cafeCreme pb-3">
+                            <div>
+                                <h4 class="font-bold text-cafeMarrom">Cheesecake</h4>
+                                <p class="text-xs text-cafeEscuro/60">Com calda artesanal de frutas vermelhas.</p>
+                            </div>
+                            <span class="font-bold text-cafeDourado">R$ 12,00</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h4 class="font-bold text-cafeMarrom">Pão de queijo</h4>
+                                <p class="text-xs text-cafeEscuro/60">Tradicional mineiro, assado na hora.</p>
+                            </div>
+                            <span class="font-bold text-cafeDourado">R$ 6,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESTAQUES -->
+    <section id="destaques" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-cafeDourado font-semibold uppercase tracking-wider text-sm">Imperdível</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-cafeMarrom">Destaques da Casa</h2>
+                <p class="text-cafeEscuro/80">As combinações favoritas dos nossos clientes para o seu dia.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Destaque 1 -->
+                <div class="bg-cafeCreme/55 border border-cafeMarrom/10 rounded-2xl p-6 flex flex-col sm:flex-row gap-6 items-center">
+                    <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=400" alt="Cappuccino da Casa" class="w-full sm:w-40 h-40 object-cover rounded-xl shadow-md">
+                    <div class="space-y-2 text-center sm:text-left">
+                        <span class="bg-cafeDourado text-white text-xs px-2.5 py-1 rounded-full font-medium">Mais Pedido</span>
+                        <h3 class="text-xl font-serif font-bold text-cafeMarrom">Cappuccino da Casa</h3>
+                        <p class="text-sm text-cafeEscuro/70">Nossa receita exclusiva com toque de especiarias e borda cremosa de chocolate.</p>
+                        <span class="inline-block font-bold text-cafeMarrom text-lg pt-1">R$ 12,00</span>
+                    </div>
+                </div>
+
+                <!-- Destaque 2 / Promoção -->
+                <div class="bg-cafeCreme/55 border border-cafeMarrom/10 rounded-2xl p-6 flex flex-col sm:flex-row gap-6 items-center">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=400" alt="Café e Pão de Queijo" class="w-full sm:w-40 h-40 object-cover rounded-xl shadow-md">
+                    <div class="space-y-2 text-center sm:text-left">
+                        <span class="bg-cafeMarrom text-cafeCreme text-xs px-2.5 py-1 rounded-full font-medium">Combo Especial</span>
+                        <h3 class="text-xl font-serif font-bold text-cafeMarrom">Café + Pão de Queijo</h3>
+                        <p class="text-sm text-cafeEscuro/70">A combinação perfeita: um Espresso quente acompanhado de um pão de queijo quentinho.</p>
+                        <span class="inline-block font-bold text-cafeMarrom text-lg pt-1">R$ 12,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" class="py-24 bg-cafeCreme">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-cafeDourado font-semibold uppercase tracking-wider text-sm">Momentos</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-cafeMarrom">Nossa Galeria</h2>
+                <p class="text-cafeEscuro/80">Um pouco do nosso espaço, cafés e doces preparados diariamente.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-xl shadow-sm h-56">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=500" alt="Grãos de café" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-sm h-56">
+                    <img src="boloedoce.jpg" alt="Bolo e doces" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-sm h-56">
+                    <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=500" alt="Ambiente da cafeteria" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-sm h-56">
+                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=500" alt="Xícara de café latte art" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+		<div class="overflow-hidden rounded-xl shadow-sm h-56">
+                    <img src="cafearoma.jpg" alt="Bolo e doces" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+
+<div class="overflow-hidden rounded-xl shadow-sm h-56">
+                    <img src="bolos.jpeg" alt="Bolo e doces" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+
+
+<div class="overflow-hidden rounded-xl shadow-sm h-56">
+                    <img src="... café.jpeg " alt="Bolo e doces" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="space-y-6">
+                <span class="text-cafeDourado font-semibold uppercase tracking-wider text-sm">Fale Conosco</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-cafeMarrom">Venha nos visitar ou entre em contato</h2>
+                <p class="text-cafeEscuro/80 leading-relaxed">
+                    Estamos de portas abertas para receber você, seus amigos e sua família. Tire dúvidas ou faça sua encomenda através dos nossos canais.
+                </p>
+
+                <div class="space-y-4 pt-2">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-cafeCreme text-cafeMarrom p-3 rounded-full text-lg">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-cafeMarrom">Endereço</h4>
+                            <p class="text-sm text-cafeEscuro/70">Rua Galileia 175, Centro - Pedra Dourada - MG</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="bg-cafeCreme text-cafeMarrom p-3 rounded-full text-lg">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-cafeMarrom">Horário de Funcionamento</h4>
+                            <p class="text-sm text-cafeEscuro/70">Segunda a Sábado: das 08h às 20h</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="bg-cafeCreme text-cafeMarrom p-3 rounded-full text-lg">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-cafeMarrom">WhatsApp</h4>
+                            <p class="text-sm text-cafeEscuro/70">(32) 98446-7435</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 pt-2">
+                    <a href="#" class="w-10 h-10 rounded-full bg-cafeCreme text-cafeMarrom flex items-center justify-center hover:bg-cafeMarrom hover:text-cafeCreme transition-colors">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-cafeCreme text-cafeMarrom flex items-center justify-center hover:bg-cafeMarrom hover:text-cafeCreme transition-colors">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-cafeCreme text-cafeMarrom flex items-center justify-center hover:bg-cafeMarrom hover:text-cafeCreme transition-colors">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Formulário de Contato -->
+            <div class="bg-cafeCreme p-8 rounded-2xl shadow-sm">
+                <h3 class="text-2xl font-serif font-bold text-cafeMarrom mb-6">Mande uma mensagem</h3>
+                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso! Agradecemos o contato.');">
+                    <div>
+                        <label class="block text-sm font-medium text-cafeEscuro mb-1">Seu Nome</label>
+                        <input type="text" required class="w-full bg-white border border-cafeMarrom/20 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-cafeMarrom" placeholder="Ex: Maria Silva">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-cafeEscuro mb-1">Seu E-mail ou Telefone</label>
+                        <input type="text" required class="w-full bg-white border border-cafeMarrom/20 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-cafeMarrom" placeholder="Ex: (11) 99999-9999">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-cafeEscuro mb-1">Mensagem</label>
+                        <textarea rows="4" required class="w-full bg-white border border-cafeMarrom/20 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-cafeMarrom" placeholder="Escreva sua dúvida, sugestão ou encomenda..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-cafeMarrom hover:bg-cafeEscuro text-cafeCreme py-3.5 rounded-lg font-medium transition-all shadow-sm">
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-cafeEscuro text-cafeCreme py-8 border-t border-cafeMarrom/20">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+            <div class="flex items-center gap-2 font-serif text-lg font-bold text-cafeDourado">
+                <i class="fa-solid fa-mug-hot"></i>
+                <span>Café & Aroma</span>
+            </div>
+            <p class="text-sm text-cafeCreme/70">
+                © 2026 Café & Aroma. Todos os direitos reservados.
+            </p>
+            <p class="text-xs text-cafeCreme/50 italic">
+                “Café & Aroma — sabor, conforto e bons momentos em cada xícara.”
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript para Controle do Menu Mobile -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fechar o menu ao clicar em um link mobile
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
